@@ -1,6 +1,6 @@
 /*
  * File is lower
- *Auth @womamire
+ * Auth @womamire
  */
 
 #include "main.h"
