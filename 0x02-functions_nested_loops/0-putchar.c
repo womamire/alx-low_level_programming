@@ -1,11 +1,11 @@
 #include "main.h"
 /**
- * main - entry point
- * Autho @womamire
- * main - Prints "_putchar" followed by a new line.
- * From Ethiopia
- * Return: Always 0.
- */
+* main - entry point
+* Autho @womamire
+* main - Prints "_putchar" followed by a new line.
+* From Ethiopia
+* Return: Always 0.
+*/
 int main(void)
 {
   /* to print putchar */
