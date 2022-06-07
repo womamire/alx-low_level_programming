@@ -1,6 +1,6 @@
 #include "main.h"
-
 /**
+ * main - entry point
  * Autho @womamire
  * main - Prints "_putchar" followed by a new line.
  * From Ethiopia
@@ -8,7 +8,9 @@
  */
 int main(void)
 {
-	_putchar('_');
+  /* to print putchar */
+
+        _putchar('_');
 	_putchar('p');
 	_putchar('u');
 	_putchar('t');
@@ -16,7 +18,6 @@ int main(void)
 	_putchar('h');
 	_putchar('a');
 	_putchar('r');
-	_putchar('\n');
-
+	_putchar('\n');	
 	return (0);
 }
