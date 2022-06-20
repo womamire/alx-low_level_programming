@@ -1,4 +1,4 @@
-/**
+/*
  * Auth: @womamire
  * File: 1-memcpy.c
  */

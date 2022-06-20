@@ -1,7 +1,8 @@
-/**
+/*
  * Auth: @womamire
  * File: 0-memset.c
  */
+
 #include "main.h"
 /**
  * _memset - fills memory with a constant byte,
