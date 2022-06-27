@@ -2,45 +2,42 @@
  * AUTH: @WOMAMIRE
  */
 
-#INCLUDE "MAIN.H"
-#INCLUDE <STDIO.H>
-#INCLUDE <STDLIB.H>
+#include "main.h"
+#include <stdlib.h>
 
 /**
- * STR_CONCAT - CONCATENATES TWO STRINGS
- * @S1: STRING1
- * @S2: STRING2
+ * str_concat - Concatenates two strings.
+ * @s1: The string to be concatenated upon.
+ * @s2: The string to be concatenated to s1.
  *
- * RETURN: POINTER
+ * Return: If concatenation fails - NULL.
+ *         Otherwise - a pointer the newly-allocated space in memory
+ *                     containing the concatenated strings.
  */
-
-CHAR *STR_CONCAT(CHAR *S1, CHAR *S2)
+char *str_concat(char *s1, char *s2)
 {
-	INT X1, X2, I, J;
-	CHAR *S;
-	CHAR *NUL = "";
+	char *concat_str;
+	int index, concat_index = 0, len = 0;
 
-	IF (s1 == NULL)
-		s1 = NUL;
-	IF (s2 == NULL)
-		s2 = nul;
+	if (s1 == NULL)
+		s1 = "";
 
-	x1 = 0, x2 = 0;
-	while (*(s1 + l1))
-		x1++;
-	while (*(s2 + x2))
-		x2++;
+	if (s2 == NULL)
+		s2 = "";
 
-	s = malloc(sizeof(char) * (x1 + x2 + 1));
+	for (index = 0; s1[index] || s2[index]; index++)
+		len++;
 
-	if (s == 0)
-		return (0);
+	concat_str = malloc(sizeof(char) * len);
 
-	for (i = 0; i < x1; i++)
-		*(s + i) = *(s1 + i);
+	if (concat_str == NULL)
+		return (NULL);
 
-	for (i = 0, j = x1; i <= x2; j++, i++)
-		*(s + j) = *(s2 + i);
+	for (index = 0; s1[index]; index++)
+		concat_str[concat_index++] = s1[index];
 
-	return (s);
+	for (index = 0; s2[index]; index++)
+		concat_str[concat_index++] = s2[index];
+
+	return (concat_str);
 }
