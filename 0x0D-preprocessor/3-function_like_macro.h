@@ -1,6 +1,6 @@
-/*
- * Desc: Header file that defines a function-like macro ABS(x)
- * that computes the absolute value of a number x.
- */
+#ifndef _FUNCTION_LIKE_MACRO
+#define _FUNCTION_LIKE_MACRO
 
-#define ABS(x) ((x) < 0 ? (-x) : (x))
+#define ABS(X) ((X) < 0 ? -(X) : (X))
+
+#endif
