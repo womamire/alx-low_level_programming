@@ -7,8 +7,10 @@
  * @name: The name of the dog.
  * @age: The age of the dog.
  * @owner: The owner of the dog.
+ *
+ * Return: On success 1.
+ * On error, -1 is returned, and errno is set appropriately.
  */
-
 void init_dog(struct dog *d, char *name, float age, char *owner)
 {
 	if (d != NULL)
