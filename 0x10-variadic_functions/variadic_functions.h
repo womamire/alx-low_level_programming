@@ -1,3 +1,6 @@
+#ifndef _FUNCTIONS_H
+#define _FUNCTIONS_H
+
 #include <stdarg.h>
 
 /**
@@ -11,9 +14,6 @@ typedef struct Ftype
 	char *tc;
 	void (*tf)(va_list);
 } ftype;
-
-#ifndef _FUNCTIONS_H
-#define _FUNCTIONS_H
 
 int _putchar(char c);
 int sum_them_all(const unsigned int n, ...);
