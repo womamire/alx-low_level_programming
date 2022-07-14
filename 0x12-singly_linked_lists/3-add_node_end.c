@@ -1,52 +1,53 @@
 #include "lists.h"
 
-int _strlen_recursion(char *s);
-
 /**
- * add_node_end - adds a new node at the end of a list_t list.
- * @head: pointer to the first element of the list.
- * @str: string to set in the new node.
- * Return: address of the new element, or NULL if it failed
- **/
-list_t *add_node_end(list_t **head, const char *str)
+ * _strlen - Returns the lenght of a string.
+ * @s: Type char pointer
+ * Return: Always 0.
+ */
+int _strlen(const char *s)
 {
-	list_t *new, *aux = *head;
+	unsigned int len;
 
-	new = malloc(sizeof(list_t));
-	if (new == NULL)
+	for (len = 0; s[len] != '\0'; len++)
 	{
-		return (NULL);
+		len++;
 	}
-	new->str = strdup(str);
-	if (!new->str)
-	{
-		free(new);
-		return (NULL);
-	}
-	new->len = _strlen_recursion(new->str);
-	new->next = NULL;
+	return (len);
 
-	if (aux)
-	{
-		while (aux->next)
-			aux = aux->next;
-		aux->next = new;
-	}
-	else
-		*head = new;
-
-	return (new);
 }
 
 /**
- * _strlen_recursion - returns the length of a string.
- * @s: string.
- * Return: length of @s.
+ * add_node_end - Returns the lenght of a string.
+ * @str: Type char pointer
+ * @head: type pointer of struct
+ * Return: new_node.
  */
-int _strlen_recursion(char *s)
+list_t *add_node_end(list_t **head, const char *str)
 {
-	if (*s == 0)
-		return (0);
+	list_t *n_node, *tmp_n_d;
+
+	n_node = malloc(sizeof(list_t));
+
+	if (n_node == NULL)
+		return (NULL);
+
+	n_node->str = strdup(str);
+	n_node->len = _strlen(str);
+	n_node->next = NULL;
+
+	if (!*head)
+	{
+		*head = n_node;
+	}
 	else
-		return (1 + _strlen_recursion(s + 1));
+	{
+		tmp_n_d = *head;
+		while (tmp_n_d->next)
+			tmp_n_d = tmp_n_d->next;
+		{
+			tmp_n_d->next = n_node;
+		}
+	}
+	return (n_node);
 }
