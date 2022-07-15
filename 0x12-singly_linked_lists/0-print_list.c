@@ -3,6 +3,7 @@
 /**
  * print_list - Print all the elements of a list_t list
  * @h: data type pointer of struct
+ * 
  * Return: elements of the str i
  */
 size_t print_list(const list_t *h)
@@ -27,6 +28,6 @@ size_t print_list(const list_t *h)
 			i++;
 		}
 	}
-	
+
 	return (i);
 }
